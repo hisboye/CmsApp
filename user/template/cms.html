@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+{% block content %}
+{% include 'status.html' %}
+
+                <div class='row'>
+                    <div class ='col-md'>
+                        <div class='card card-body'>
+                            <table class='table table-sm'>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Category</th>
+                                    <th>Notes</th>
+                                    <th>Date Ordered</th>
+                                    <th>Status</th>
+                                    
+                                </tr>
+                                    {% for user_order in order %}
+                                <tr>
+                                    <th>{{user_order.product}}</th>
+                                    <th>{{user_order.product.category}}</th>
+                                    <th>{{user_order.note}}
+                                    <th>{{user_order.date_created}}</th>
+                                    <th>{{user_order.status}}</th>
+                                   
+                                    {% endfor %}
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}
