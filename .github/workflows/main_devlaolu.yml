@@ -61,3 +61,4 @@ jobs:
           app-name: 'vlad'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8254C7DE84E841FA84A6DBE1017EFA1F }}
+          
