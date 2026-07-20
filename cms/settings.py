@@ -19,6 +19,10 @@ from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://vlad-e5g5ethjcrcsc0da.westeurope-01.azurewebsites.net",
+]
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -31,7 +35,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!    
 
 
-DEBUG = config('DEBUG',cast=bool,default=True)
+DEBUG = config('DEBUG',cast=bool,default=False)
 
 ALLOWED_HOSTS = ['*']
 AUTH_USER_MODEL='accounts.CustomUser'
